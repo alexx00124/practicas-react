@@ -1,10 +1,19 @@
+import { FaUser } from 'react-icons/fa';
+import { IoMdAdd } from 'react-icons/io';
+
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4">
-      {/* Izquierda */}
-      <div className="flex items-center gap-4">
-        <button className="border-2 px-3 py-1">Usuario</button>
-        <button className="border-2 px-3 py-1">+</button>
+      <div className="flex space-x-2">
+        {/* Botón usuario */}
+        <button className="bg-gray-700 text-white p-2 rounded-md">
+          <FaUser className="w-5 h-5" />
+        </button>
+
+        {/* Botón agregar */}
+        <button className="bg-[rgba(190,146,237)] text-white p-2 rounded-md">
+          <IoMdAdd className="w-5 h-5" />
+        </button>
       </div>
 
       {/* Centro */}
@@ -17,7 +26,7 @@ export default function Navbar() {
       {/* Derecha */}
       <div className="flex items-center gap-4">
         <button className="px-6 py-1 rounded-full border border-black text-black">Log in</button>
-        <button className="px-6 py-1 rounded-full bg-[rgb(160,136,247)] text-white">Sign up</button>
+        <button className="px-6 py-1 rounded-full bg-[rgba(190,146,237)] text-white">Sign up</button>
       </div>
     </nav>
   );
